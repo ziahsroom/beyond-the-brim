@@ -1,0 +1,118 @@
+/* Set a background color for the body and ensure full viewport coverage */
+body {
+    background-color: #FF8210;
+    margin: 0; /* Remove default margin for the body */
+    padding: 0; /* Remove default padding for the body */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Ensure the header has sufficient width and text is centered */
+.header {
+    text-align: center; /* Center align text */
+    width: 100%; /* Ensure full width to avoid text cut-off */
+}
+
+/* Animation for the title: slow fade-in */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Make the title text much larger with a calligraphic font and apply fade-in animation */
+h1 {
+    color: #B1D4E0;
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
+    font-size: 10em; /* Larger font size */
+    overflow: visible; /* Ensure text is not cut off */
+    white-space: nowrap; /* Prevent text wrapping */
+    padding: 0; /* No padding needed */
+    margin-bottom: 10px; /* Decrease space between h1 and h2 */
+    animation: fade-in 3s ease-in; /* Apply fade-in animation over 3 seconds */
+}
+
+/* Animation for the subtitle: slow slide-in from the left */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Make the subtitle text larger with a similar font and apply slide-in animation */
+h2 {
+    color: #0000FF;
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
+    font-size: 5em; /* Larger font size */
+    overflow: visible; /* Ensure text is not cut off */
+    padding: 0; /* No padding needed */
+    margin-top: 0; /* Eliminate top margin */
+    animation: slide-in 3s ease-in; /* Apply slide-in animation over 3 seconds */
+}
+
+/* Animation for the image: rotate in from 90 degrees */
+@keyframes rotate-in {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+/* Center the image in the middle of the page and apply rotate-in animation */
+.image-container {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+/* Make the image smaller, ensure it has rounded corners, and apply rotate-in animation */
+.cover-image {
+    max-width: 40%; /* Decrease the maximum width */
+    border-radius: 10px; /* Add slight rounding to image corners */
+    animation: rotate-in 3s ease-in-out; /* Apply rotate-in animation over 3 seconds */
+}
+
+/* Animation for the next-page link: fade-in with a slight bounce */
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    80% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Position the link and apply bounce-in animation */
+.next-page {
+    position: fixed; /* Keeps the link in place as the page scrolls */
+    bottom: 10px; /* Position from the bottom */
+    right: 10px; /* Position from the right */
+    font-family: 'Times New Roman', serif; /* Classic font style */
+    font-size: 1.5em; /* Make the link text larger */
+    color: white; /* White text color for visibility */
+    text-decoration: none; /* No underline */
+    padding: 5px 10px; /* Add padding */
+    border-radius: 5px; /* Smooth corners */
+    animation: bounce-in 2s ease-in; /* Apply bounce-in animation over 2 seconds */
+}
+
+/* Hover effect for the link to indicate it's clickable */
+.next-page:hover {
+    background-color: grey; /* Change background color on hover */
+}
+

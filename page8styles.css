@@ -1,0 +1,130 @@
+/* Body with full viewport coverage and grid-based layout */
+body {
+    background-color: #FF8210; /* Orange background */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Vertical alignment */
+    justify-content: space-between; /* Ensure marquee at bottom */
+    height: 100vh; /* Full viewport coverage */
+}
+
+/* Animation for the summary container on load */
+@keyframes popIn {
+    0% {
+        opacity: 0; /* Start from invisible */
+        transform: scale(0.8); /* Start with a smaller scale */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Return to original scale */
+    }
+}
+
+/* Animation for text elements with staggered fade-in */
+@keyframes fadeInStaggered {
+    0% {
+        opacity: 0; /* Start from invisible */
+        transform: translateY(20px); /* Start with slight downward shift */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+/* Main layout for the summary container with pop-in animation */
+.summary-container {
+    flex: 1; /* Allow this section to grow */
+    display: flex;
+    flex-direction: column; /* Vertical stacking */
+    justify-content: center; /* Center content */
+    align-items: center;
+    padding: 20px; /* Padding around the content */
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    animation: popIn 1.5s; /* Pop-in animation */
+}
+
+/* Style for the summary title */
+.summary-title {
+    font-size: 2em; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+    margin-top: 20px; /* Space at the top */
+    animation: fadeInStaggered 1s; /* Smooth fade-in animation */
+    transition: color 0.3s; /* Transition effect for hover effects */
+}
+
+/* Hover effect for the summary title */
+.summary-title:hover {
+    color: #FFD700; /* Change color to gold on hover */
+}
+
+/* Style for text sections within the summary container */
+.summary-container p {
+    color:black; /* White text */
+    font-size: 1.2em; /* Consistent font size */
+    line-height: 1.6; /* Increased line spacing */
+    font-family: 'Courier New', Courier, monospace;
+    transition: color 0.5s; /* Smooth transition for hover effect */
+    margin: 10px; /* Add margin between paragraphs */
+    animation: fadeInStaggered 0.5s ease-in 0.5s forwards; /* Staggered fade-in animation */
+}
+
+/* Hover effect for text sections */
+.summary-container p:hover {
+    color: #B1D4E0; /* Baby blue on hover */
+}
+
+/* Style for the image with slide-in animation */
+.image-grid {
+    display: flex; /* Flex layout */
+    justify-content: center; /* Centered image */
+    margin-top: 20px; /* Add top margin */
+}
+
+.summary-image {
+    max-width: 50%; /* Limit the image size */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s; /* Hover transition */
+    animation: slideIn 1s ease-out; /* Slide-in animation */
+}
+
+/* Hover effect for the image */
+.summary-image:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Animated marquee container at the bottom of the page */
+.marquee-container {
+    width: 100%; /* Full width */
+    overflow: visible; /* Hide overflow */
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    padding: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Content inside the marquee with scrolling animation */
+.marquee-content {
+    display: inline-block; /* Keep content in a single line */
+    white-space: nowrap; /* No line breaks */
+    animation: scroll 10s linear infinite; /* Continuous scrolling */
+    font-size: 1.2em; /* Consistent font size */
+    font-family: 'Courier New', Courier, monospace; /* Font choice */
+    color: #0000FF; /* Blue text for hashtags */
+}
+
+/* Define scrolling animation for the marquee */
+@keyframes scroll {
+    from {
+        transform: translateX(100%); /* Start from the right edge */
+    }
+    to {
+        transform: translateX(-100%); /* Move to the left edge */
+    }
+}
+

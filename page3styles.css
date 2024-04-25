@@ -1,0 +1,73 @@
+/* Set a background color for the body and ensure full viewport coverage */
+body {
+    background-color: #FF8210; /* Same background color as the previous page */
+    margin: 0; /* Remove default margin for the body */
+    padding: 0; /* Remove default padding for the body */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Main grid layout for structured content */
+.main-grid {
+    display: grid; /* Use grid-based layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the image grid */
+    gap: 20px; /* Spacing between grid items */
+    text-align: center; /* Center text content within the grid */
+    padding: 20px; /* Padding for the entire grid */
+    width: 90%; /* Limit the overall width of the grid */
+}
+
+/* Style the header in the gender exploration section */
+.gender-exploration h1 {
+    color: #B1D4E0; /* Light blue color for the header */
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
+    font-size: 3.5em; /* Title size */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+    animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+/* Define a keyframe animation for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Style the paragraph in the gender exploration section */
+.gender-exploration p {
+    color: white; /* White text for readability */
+    font-size: 1.2em; /* Consistent font size */
+    line-height: 1.5; /* Consistent line spacing for readability */
+    font-family: 'Courier New', Courier, monospace;
+    transition: color 0.5s; /* Smooth transition for text color */
+}
+
+/* Add a hover effect to change the text color */
+.gender-exploration p:hover {
+    color: #B1D4E0; /* Light blue on hover */
+}
+
+/* Style the image grid section */
+.image-grid {
+    display: grid; /* Use a grid layout for images */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for the images */
+    gap: 20px; /* Spacing between images */
+    align-items: center; /* Center the images vertically */
+    justify-content: center; /* Center the images horizontally */
+}
+
+/* Style the images in the image grid section */
+.gender-image {
+    width: 100%; /* Make the images responsive */
+    border-radius: 10px; /* Rounded corners for consistency */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+/* Add a hover effect to scale up the images */
+.gender-image:hover {
+    transform: scale(1.05); /* Slightly increase the scale on hover */
+}
