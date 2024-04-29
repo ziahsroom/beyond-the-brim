@@ -1,17 +1,28 @@
-/* Set a bold background and ensure full viewport coverage */
+/* Gradient background with subtle animation */
 body {
-    background-color: #FF8210; /* Bright orange background */
+    background: linear-gradient(135deg, #FF8210, #FFAF60); /* Gradient from orange to lighter orange */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     display: grid; /* Use grid for layout */
-    grid-template-rows: 1fr; /* Single row layout */
+    grid-template-rows: 1fr; /* Single-row layout */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     height: 100vh; /* Full viewport height */
     overflow: visible; /* Prevent overflow */
+    animation: gradientShift 10s infinite alternate; /* Animation to shift the gradient */
 }
 
-/* Main grid layout with a bold design */
+/* Define the gradient shift animation */
+@keyframes gradientShift {
+    from {
+        background: linear-gradient(135deg, #FF8210, #FFAF60); /* Start with the initial gradient */
+    }
+    to {
+        background: linear-gradient(135deg, #FFAF60, #FF8210); /* Shift gradient */
+    }
+}
+
+/* Main grid layout with dynamic hover effect */
 .main-grid {
     display: flex; /* Use flexbox within the grid */
     flex-direction: column; /* Align items in a column */
@@ -19,70 +30,78 @@ body {
     align-items: center; /* Center content horizontally */
     padding: 40px; /* Padding for the entire grid */
     border: 4px solid #B1D4E0; /* Light blue border */
-    border-radius: 15px; /* Rounded corners for softness */
+    border-radius: 15px; /* Rounded corners */
     background: rgba(0, 0, 0, 0.7); /* Translucent black background */
-    transition: transform 0.3s; /* Smooth transition for scaling */
+    transition: transform 0.3s ease-in-out, background 0.5s; /* Smooth transitions */
 }
 
-/* Hover effect for scaling up the entire grid */
-.main-grid:hover {
-    transform: scale(1.05); /* Slightly increase the scale on hover */
-}
 
-/* Style the introduction with bold animations */
+
+/* Style the introduction with animations */
 .introduction h1 {
     color: #B1D4E0; /* Light blue for titles */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
     font-size: 7em; /* Large font for impact */
     text-transform: uppercase; /* Uppercase for boldness */
-    animation: zoomIn 1.5s ease-out; /* Animation to zoom in */
+    animation: bounceIn 1.5s ease-out; /* Bounce-in animation for a dynamic effect */
 }
 
-/* Define a keyframe animation for zooming in */
-@keyframes zoomIn {
+/* Keyframe animation for bounce-in effect */
+@keyframes bounceIn {
     from {
-        transform: scale(0.5);
-        opacity: 0;
+        transform: scale(0.5); /* Start with half scale */
+        opacity: 0; /* Invisible at the start */
+    }
+    50% {
+        transform: scale(1.2); /* Expand during bounce */
     }
     to {
-        transform: scale(1);
-        opacity: 1;
+        transform: scale(1); /* Return to original scale */
+        opacity: 1; /* Full visibility */
     }
 }
 
+/* Style the introduction paragraph with additional animations */
 .introduction p {
     color: white; /* White text for readability */
     font-size: 1.5em; /* Slightly larger font size */
-    line-height: 2; /* Increased line spacing for readability */
+    line-height: 2; /* Increased line spacing */
     font-family: 'Courier New', Courier, monospace;
     animation: fadeInUp 1.5s forwards; /* Fade-in animation with upward movement */
+    transition: color 0.5s; /* Smooth transition for text color */
 }
 
-/* Define a keyframe animation for fading in with upward movement */
-@keyframes fadeInUp {
+/* Define a keyframe animation for spinning effect */
+@keyframes spin {
     from {
-        transform: translateY(30px);
-        opacity: 0;
+        transform: rotate(0deg); /* Start at zero rotation */
     }
     to {
-        transform: translateY(0);
-        opacity: 1;
+        transform: rotate(360deg); /* Complete rotation */
     }
 }
 
-/* Style the personal connection section with hover effects */
+/* Apply the spin animation to certain elements */
+.spin-animation {
+    animation: spin 2s linear infinite; /* Continuous spinning animation */
+}
+
+/* Style the personal connection section with hover and animation effects */
 .personal-connection h2 {
     color: #B1D4E0; /* Light blue color */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
     font-size: 4em; /* Large font for boldness */
     text-transform: uppercase; /* Uppercase for impact */
-    transition: color 0.3s; /* Smooth transition on hover */
+    transition: color 0.3s ease-in-out; /* Smooth transition on hover */
+    animation: fadeInUp 2s; /* Fade-in with upward movement */
 }
 
 .personal-connection h2:hover {
     color: white; /* Change color on hover */
+    transition-delay: 0.1s; /* Delay for hover transition */
 }
 
+/* Style the personal connection paragraph with hover effects */
 .personal-connection p {
     color: white; /* White text for consistency */
     font-size: 1.3em; /* Consistent font size */
@@ -90,34 +109,40 @@ body {
     animation: fadeInUp 2s forwards; /* Fade-in animation with upward movement */
 }
 
-/* Style the image section with unique hover effects */
+/* Style the image section with hover effects */
 .image-section {
     text-align: center; /* Center the image */
     padding: 20px; /* Padding around the image */
 }
 
+/* Apply border and shadow effects with spin animation */
 .hats-image {
     max-width: 70%; /* Larger maximum width for emphasis */
     border: 3px solid white; /* Bold white border */
     border-radius: 20px; /* Larger rounded corners */
     box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.4); /* Strong shadow for 3D effect */
-    transition: transform 0.4s; /* Smooth transition on hover */
+    transition: transform 0.4s ease-in-out; /* Smooth transition */
+    animation: spin 10s linear infinite; /* Slow spinning animation */
 }
 
 /* Hover effect with rotation and scale */
 .hats-image:hover {
-    transform: rotate(5deg) scale(1.1); /* Rotate and scale up on hover */
+    transform: rotate(5deg) scale(1.1); /* Rotate and scale on hover */
+    transition-delay: 0.2s; /* Delay for hover effect */
 }
 
-/* Style the link to the previous page */
+/* Style the link to the previous page with hover and spin animation */
 .previous-page-link a {
     color: white; /* White text for consistency */
     font-size: 1.5em; /* Larger font size */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
-    transition: color 0.3s; /* Smooth transition on hover */
+    transition: color 0.3s ease-in-out, transform 0.5s; /* Smooth transitions */
+    animation: fadeInUp 1.5s; /* Fade-in animation */
 }
 
 .previous-page-link a:hover {
     color: #FF8210; /* Orange text on hover */
+    transform: rotate(10deg); /* Rotate on hover */
+    transition-delay: 0.1s; /* Delay for hover effect */
 }

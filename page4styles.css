@@ -1,12 +1,5 @@
-/* Styling for the header with the title */
 
-h1 {
-    color: #B1D4E0; /* Light blue color for the header */
-    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
-    font-size: 3.5em; /* Title size */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
-    animation: fadeIn 2s forwards; /* Fade-in animation */
-}
+
 
 body{
     background-color:white;
