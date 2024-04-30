@@ -49,7 +49,7 @@ h1 {
 
 /* Make the subtitle text larger with a similar font and apply slide-in animation */
 h2 {
-    color: #0000FF;
+    color:white;
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
     font-size: 5em; /* Larger font size */
     overflow: visible; /* Ensure text is not cut off */
@@ -109,10 +109,5 @@ h2 {
     padding: 5px 10px; /* Add padding */
     border-radius: 5px; /* Smooth corners */
     animation: bounce-in 2s ease-in; /* Apply bounce-in animation over 2 seconds */
-}
-
-/* Hover effect for the link to indicate it's clickable */
-.next-page:hover {
-    background-color: grey; /* Change background color on hover */
 }
 

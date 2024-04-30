@@ -103,10 +103,12 @@ body {
 
 /* Style the personal connection paragraph with hover effects */
 .personal-connection p {
-    color: white; /* White text for consistency */
-    font-size: 1.3em; /* Consistent font size */
-    line-height: 1.6; /* Consistent line spacing */
-    animation: fadeInUp 2s forwards; /* Fade-in animation with upward movement */
+    color: white; /* White text for readability */
+    font-size: 1.5em; /* Slightly larger font size */
+    line-height: 2; /* Increased line spacing */
+    font-family: 'Courier New', Courier, monospace;
+    animation: fadeInUp 1.5s forwards; /* Fade-in animation with upward movement */
+    transition: color 0.5s; /* Smooth transition for text color */
 }
 
 /* Style the image section with hover effects */
@@ -130,9 +132,17 @@ body {
     transform: rotate(5deg) scale(1.1); /* Rotate and scale on hover */
     transition-delay: 0.2s; /* Delay for hover effect */
 }
+/* Container for navigation links */
+.navigation-links {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Space between links */
+    align-items: center; /* Center align the links vertically */
+    padding: 20px; /* Padding around the links */
+    width: 100%; /* Ensure the container spans the full width */
+}
 
-/* Style the link to the previous page with hover and spin animation */
-.previous-page-link a {
+/* Style the navigation links with hover and animation effects */
+.navigation-links a {
     color: white; /* White text for consistency */
     font-size: 1.5em; /* Larger font size */
     text-decoration: none; /* No underline */
@@ -141,8 +151,11 @@ body {
     animation: fadeInUp 1.5s; /* Fade-in animation */
 }
 
-.previous-page-link a:hover {
+.navigation-links a:hover {
     color: #FF8210; /* Orange text on hover */
     transform: rotate(10deg); /* Rotate on hover */
     transition-delay: 0.1s; /* Delay for hover effect */
 }
+
+
+/* Hover effect with rotation

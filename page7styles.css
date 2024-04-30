@@ -59,3 +59,43 @@ body{
     object-fit: cover; /* Ensure the image covers the area */
     border-radius: 10px; /* Rounded corners */
 }
+
+
+
+
+
+/* Container for navigation links */
+.navigation-links {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Space between links */
+    align-items: center; /* Center align the links vertically */
+    padding: 20px; /* Padding around the links */
+    width: 100%; /* Ensure the container spans the full width */
+}
+
+/* Style the navigation links with hover and animation effects */
+.navigation-links a {
+    color:  #B1D4E0; /* White text for consistency */
+    font-size: 1.5em; /* Larger font size */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease-in-out, transform 0.5s; /* Smooth transitions */
+    animation: fadeInUp 1.5s; /* Fade-in animation */
+}
+
+.navigation-links a:hover {
+    color: #FF8210; /* Orange text on hover */
+    transform: rotate(10deg); /* Rotate on hover */
+    transition-delay: 0.1s; /* Delay for hover effect */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
