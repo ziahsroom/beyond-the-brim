@@ -1,8 +1,15 @@
 /* Styling for the header with the title */
 
-
+h1 {
+color: #d46408; /* Light blue color */
+        font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
+        font-size: 4em; /* Large font for boldness */
+        text-transform: uppercase; /* Uppercase for impact */
+        transition: color 0.3s ease-in-out; /* Smooth transition on hover */
+        animation: fadeInUp 2s; /* Fade-in with upward movement */
+    }
 body{
-    background-color: white;
+    background-color:#B1D4E0;
 }
 
 /* Grid layout for the flipping images */
@@ -43,7 +50,6 @@ body{
     backface-visibility: hidden; /* Hide the front when flipped */
     transform: rotateY(180deg); /* Rotate 180 degrees for the flip */
     background-color: white; /* White background for text */
-    padding: 20px; /* Padding for text content */
     text-align: center; /* Center align text */
 }
 
