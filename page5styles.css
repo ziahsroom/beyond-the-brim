@@ -80,7 +80,7 @@ body{
 
 /* Style the navigation links with hover and animation effects */
 .navigation-links a {
-    color:  #B1D4E0; /* White text for consistency */
+    color:  white; /* White text for consistency */
     font-size: 1.5em; /* Larger font size */
     text-decoration: none; /* No underline */
     font-weight: bold; /* Bold text */
