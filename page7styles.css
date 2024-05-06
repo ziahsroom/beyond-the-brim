@@ -3,6 +3,9 @@ body {
     background-color: #E8F0E1; /* Pale green, very light and soothing */
 }
 
+.back p {
+    font-family: 'Courier New', Courier, monospace;
+}
 /* Header Styles */
 h1 {
     color: #D17F87; /* Dusty rose, a muted pink that is soft yet distinctive */

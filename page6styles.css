@@ -44,7 +44,9 @@ h1 {
     backface-visibility: hidden;
 }
 
-
+.back p {
+    font-family: 'Courier New', Courier, monospace;
+}
 
 .back {
     background-color: #FAF8F5; /* Lighter background for high contrast */
@@ -54,7 +56,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* More padding for better text layout */
+  
 }
 
 /* Hover Effect for Flip Card */
