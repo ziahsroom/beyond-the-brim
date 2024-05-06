@@ -1,40 +1,40 @@
 /* General Body Styles */
 body {
-    background-color: #D3E0EA; /* Light blue-gray, a softer alternative to #B1D4E0 */
+    background-color: #FFE5B4; /* A neutral, softer beige for a refined look */
 }
 
 /* Header Styles */
 h1 {
-    color: #FFA500; /* A slightly richer shade of orange than #FF8210 for a fresh look */
+    color: #C06014; /* A deep burnt orange for more warmth */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-size: 4em;
     text-transform: uppercase;
     transition: color 0.3s ease-in-out;
-    animation: fadeInSlideUp 2s ease;
+    animation: fadeInSlideDown 2s ease; /* Changing animation direction */
     text-align: center;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Adds depth to the text */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Enhancing text shadow for depth */
 }
 
 /* Grid Layout for Flipping Images */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    gap: 25px; /* Slightly larger gap for better spacing */
+    padding: 30px; /* More padding for a spacious layout */
 }
 
-/* Flip Card Container */
+/* Flip Container for Each Flip Card */
 .flip-container {
-    perspective: 1000px;
+    perspective: 1200px; /* Increased perspective for a more dramatic 3D effect */
 }
 
 /* Flip Card Styles */
 .flip-card {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 320px; /* Slightly taller cards for more content */
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 0.7s; /* Smoother transition */
 }
 
 .front, .back {
@@ -44,25 +44,23 @@ h1 {
     backface-visibility: hidden;
 }
 
-.front {
-    border: 4px solid #FFA500; /* Orange border to match the header */
-}
+
 
 .back {
-    background-color: #FFF9F0; /* Very light orange for a subtle look */
+    background-color: #FAF8F5; /* Lighter background for high contrast */
     transform: rotateY(180deg);
-    color: #333;
-    font-size: 1.2em;
+    color: #505050; /* Darker text for better readability */
+    font-size: 1.1em;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 20px; /* More padding for better text layout */
 }
 
 /* Hover Effect for Flip Card */
 .flip-card:hover {
     transform: rotateY(180deg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
+    box-shadow: 0 0 20px rgba(58, 80, 107, 0.3); /* Deeper shadow for a pronounced effect */
 }
 
 /* Image Styling within Flip Cards */
@@ -70,7 +68,7 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px; /* Slightly reduced rounded corners for a subtle look */
 }
 
 /* Navigation Link Styles */
@@ -83,7 +81,7 @@ h1 {
 }
 
 .navigation-links a {
-    color: #FFA500; /* Same orange as header for consistency */
+    color: #C06014; /* Link color matching the header */
     font-size: 1.5em;
     text-decoration: none;
     font-weight: bold;
@@ -91,20 +89,18 @@ h1 {
 }
 
 .navigation-links a:hover {
-    color: #FF8210; /* Light orange from the original page 4 for a hover effect */
-    transform: translateY(-5px); /* Slight lift instead of rotation for a cleaner look */
+    color: #FF8210; /* A lighter, eye-catching orange on hover */
+    transform: translateY(-5px); /* Subtle lift effect instead of rotation */
 }
 
 /* Keyframes for Animations */
-@keyframes fadeInUp {
+@keyframes fadeInSlideDown {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-    

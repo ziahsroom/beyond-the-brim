@@ -14,11 +14,6 @@ h1 {
     text-align: center;
 }
 
-/* Paragraph Text Styles */
-p {
-    font: 'Courier New', Courier, monospace;
-    color: #333; /* Darker text for better contrast */
-}
 
 /* Grid Layout for Flipping Images */
 .image-grid {
@@ -26,6 +21,11 @@ p {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
+}
+
+
+.back p {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Flip Card Container */
@@ -49,12 +49,10 @@ p {
     backface-visibility: hidden;
 }
 
-.front {
-    border: 5px solid #FFF; /* White border for front images */
-}
+
 
 .back {
-    background-color: #F2F7F2; /* Light green background */
+  
     transform: rotateY(180deg);
     color: #5C946E; /* Matching text color */
     font-size: 1.2em;

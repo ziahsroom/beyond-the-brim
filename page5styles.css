@@ -25,6 +25,11 @@ h1 {
         perspective: 1000px; /* Perspective for 3D effect */
     }
     
+
+    .back p {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
     /* Flip card with front and back */
     .flip-card {
         position: relative; /* Required for flipping */
@@ -71,13 +76,12 @@ h1 {
 
 /* Container for navigation links */
 .navigation-links {
-    display: flex; /* Enable flexbox layout */
-    justify-content: space-between; /* Space between links */
-    align-items: center; /* Center align the links vertically */
-    padding: 20px; /* Padding around the links */
-    width: 100%; /* Ensure the container spans the full width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
 }
-
 /* Style the navigation links with hover and animation effects */
 .navigation-links a {
     color:  white; /* White text for consistency */

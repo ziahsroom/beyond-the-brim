@@ -1,40 +1,40 @@
 /* General Body Styles */
 body {
-    background-color: #F5F5DC; /* Light beige background */
+    background-color: #E8F0E1; /* Pale green, very light and soothing */
 }
 
 /* Header Styles */
 h1 {
-    color: #3A506B; /* Bold blue color */
+    color: #D17F87; /* Dusty rose, a muted pink that is soft yet distinctive */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-size: 4em;
     text-transform: uppercase;
     transition: color 0.3s ease-in-out;
     animation: fadeInSlideUp 2s ease;
     text-align: center;
-    text-shadow: 2px 2px 8px #888888; /* Soft grey shadow for depth */
+    text-shadow: 2px 2px 4px rgba(108, 123, 138, 0.5); /* Soft grey shadow for subtle depth */
 }
 
 /* Grid Layout for Flipping Images */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px; /* Slightly larger gap between items */
-    padding: 25px; /* Increased outer padding */
+    gap: 25px; /* Ample space between cards */
+    padding: 25px; /* Spacious layout */
 }
 
 /* Flip Card Container */
 .flip-container {
-    perspective: 1000px;
+    perspective: 1200px; /* Good depth for 3D flipping */
 }
 
 /* Flip Card Styles */
 .flip-card {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 320px; /* Sufficient height for content */
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    transition: transform 0.7s; /* Smooth flipping */
 }
 
 .front, .back {
@@ -44,25 +44,23 @@ h1 {
     backface-visibility: hidden;
 }
 
-.front {
-    border: 5px solid #3A506B; /* Bold blue border */
-}
+
 
 .back {
-    background-color: #BFD7ED; /* Light blue background */
+    background-color: #F4E2E7; /* Very soft pink, almost off-white, enhancing text readability */
     transform: rotateY(180deg);
-    color: #222; /* Dark grey text for contrast */
+    color: #68756D; /* Slate green, providing a natural contrast */
     font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px; /* Adjusted padding for text readability */
+    padding: 20px; /* Comfortable text spacing */
 }
 
 /* Hover Effect for Flip Card */
 .flip-card:hover {
     transform: rotateY(180deg);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
 }
 
 /* Image Styling within Flip Cards */
@@ -70,7 +68,7 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px; /* More pronounced rounded corners */
+    border-radius: 5px; /* Slightly rounded for a gentle look */
 }
 
 /* Navigation Link Styles */
@@ -83,28 +81,26 @@ h1 {
 }
 
 .navigation-links a {
-    color: #5F4B8B; /* Purple text */
+    color: #D17F87; /* Matching the header for a cohesive design */
     font-size: 1.5em;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.5s ease-in-out, transform 0.5s;
+    transition: color 0.3s ease-in-out, transform 0.5s;
 }
 
 .navigation-links a:hover {
-    color: #E63946; /* Reddish color on hover */
-    transform: scale(1.1); /* Slight scale up on hover */
+    color: #BF5F82; /* A darker shade of pink for contrast on hover */
+    transform: translateY(-3px); /* Gentle lift for tactile feedback */
 }
 
 /* Keyframes for Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
-    
