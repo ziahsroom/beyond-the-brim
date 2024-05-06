@@ -1,13 +1,15 @@
 /* Styling for the header with the title */
 
 h1 {
-    color: #d46408; /* Light blue color */
-            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; /* Calligraphic font */
-            font-size: 4em; /* Large font for boldness */
-            text-transform: uppercase; /* Uppercase for impact */
-            transition: color 0.3s ease-in-out; /* Smooth transition on hover */
-            animation: fadeInUp 2s; /* Fade-in with upward movement */
-        }
+    color: #d46408; /* Light orange color */
+    font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+    font-size: 4em; /* Large font for boldness */
+    text-transform: uppercase; /* Uppercase for impact */
+    transition: color 0.3s ease-in-out; /* Smooth transition on hover */
+    animation: fadeInSlideUp 2s ease; /* Updated animation for fade-in and slide-up */
+    text-align: center; /* Centers the text horizontally */
+}
+
     body{
         background-color:#B1D4E0;
     }
