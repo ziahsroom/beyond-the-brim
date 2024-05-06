@@ -89,7 +89,7 @@ h1 {
 }
 
 .navigation-links a:hover {
-    color:#FF8210; /* Orange text on hover */
+    color:#0000FF; /* Orange text on hover */
     transform: rotate(10deg); /* Rotate on hover */
     transition-delay: 0.1s; /* Delay for hover effect */
 }
