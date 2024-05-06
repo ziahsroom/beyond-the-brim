@@ -1,7 +1,5 @@
-/* Styling for the header with the title */
-
 h1 {
-    color: #d46408; /* Light orange color */
+    color: #FF8210; /* Light orange color */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-size: 4em; /* Large font for boldness */
     text-transform: uppercase; /* Uppercase for impact */
@@ -69,33 +67,32 @@ h1 {
     }
     
     
-    
-    
-    /* Container for navigation links */
-    .navigation-links {
-        display: flex; /* Enable flexbox layout */
-        justify-content: space-between; /* Space between links */
-        align-items: center; /* Center align the links vertically */
-        padding: 20px; /* Padding around the links */
-        width: 100%; /* Ensure the container spans the full width */
-    }
-    
-    /* Style the navigation links with hover and animation effects */
-    .navigation-links a {
-        color: white; /* White text for consistency */
-        font-size: 1.5em; /* Larger font size */
-        text-decoration: none; /* No underline */
-        font-weight: bold; /* Bold text */
-        transition: color 0.3s ease-in-out, transform 0.5s; /* Smooth transitions */
-        animation: fadeInUp 1.5s; /* Fade-in animation */
-    }
-    
-    .navigation-links a:hover {
-        color: #FF8210; /* Orange text on hover */
-        transform: rotate(10deg); /* Rotate on hover */
-        transition-delay: 0.1s; /* Delay for hover effect */
-    }
-    
+  
+
+/* Container for navigation links */
+.navigation-links {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Space between links */
+    align-items: center; /* Center align the links vertically */
+    padding: 20px; /* Padding around the links */
+    width: 100%; /* Ensure the container spans the full width */
+}
+
+/* Style the navigation links with hover and animation effects */
+.navigation-links a {
+    color:  white; /* White text for consistency */
+    font-size: 1.5em; /* Larger font size */
+    text-decoration: none; /* No underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease-in-out, transform 0.5s; /* Smooth transitions */
+    animation: fadeInUp 1.5s; /* Fade-in animation */
+}
+
+.navigation-links a:hover {
+    color:#FF8210; /* Orange text on hover */
+    transform: rotate(10deg); /* Rotate on hover */
+    transition-delay: 0.1s; /* Delay for hover effect */
+}
     @keyframes fadeInUp {
         from {
             opacity: 0;
