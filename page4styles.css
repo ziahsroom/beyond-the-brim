@@ -1,112 +1,115 @@
+/* General Body Styles */
+body {
+    background-color: #E0E4CC; /* Soft green background */
+}
+
+/* Header Styles */
 h1 {
-    color: #FF8210; /* Light orange color */
+    color: #5C946E; /* Earthy green */
+    text-shadow: 2px 2px 4px #000; /* Subtle shadow for depth */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
-    font-size: 4em; /* Large font for boldness */
-    text-transform: uppercase; /* Uppercase for impact */
-    transition: color 0.3s ease-in-out; /* Smooth transition on hover */
-    animation: fadeInSlideUp 2s ease; /* Updated animation for fade-in and slide-up */
-    text-align: center; /* Centers the text horizontally */
+    font-size: 4em;
+    text-transform: uppercase;
+    animation: fadeInSlideUp 2s ease;
+    text-align: center;
 }
 
-    body{
-        background-color:#B1D4E0;
-    
+/* Paragraph Text Styles */
+p {
+    font: 'Courier New', Courier, monospace;
+    color: #333; /* Darker text for better contrast */
+}
 
- }
+/* Grid Layout for Flipping Images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
 
- p{
+/* Flip Card Container */
+.flip-container {
+    perspective: 1000px;
+}
+
+/* Flip Card Styles */
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    border: 5px solid #FFF; /* White border for front images */
+}
+
+.back {
+    background-color: #F2F7F2; /* Light green background */
+    transform: rotateY(180deg);
+    color: #5C946E; /* Matching text color */
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
     font:'Courier New', Courier, monospace;
- }
-    
-    /* Grid layout for the flipping images */
-    .image-grid {
-        display: grid; /* Use grid layout */
-        grid-template-columns: repeat(3, 1fr); /* Three columns */
-        gap: 20px; /* Space between grid items */
-        padding: 20px; /* Outer padding */
-    }
-    
-    /* Flip container for each flip card */
-    .flip-container {
-        perspective: 1000px; /* Perspective for 3D effect */
-    }
-    
-    /* Flip card with front and back */
-    .flip-card {
-        position: relative; /* Required for flipping */
-        width: 100%; /* Full width */
-        height: 300px; /* Fixed height */
-        transform-style: preserve-3d; /* Enable 3D transforms */
-        transition: transform 0.6s; /* Transition time for flip */
-    }
-    
-    /* Style for the front side of the flip card */
-    .front {
-        position: absolute;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        backface-visibility: hidden; /* Hide the back when flipped */
-    }
-    
-    /* Style for the back side of the flip card */
-    .back {
-        position: absolute;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        backface-visibility: hidden; /* Hide the front when flipped */
-        transform: rotateY(180deg); /* Rotate 180 degrees for the flip */
-        background-color: white; /* White background for text */
-        text-align: center; /* Center align text */
-    }
-    
-    /* Flip effect for the flip card */
-    .flip-card:hover {
-        transform: rotateY(180deg); /* Trigger the flip on hover */
-    }
-    
-    /* Style for the image used in the flip card */
-    .hat-image {
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        object-fit: cover; /* Ensure the image covers the area */
-        border-radius: 10px; /* Rounded corners */
-    }
-    
-   
-  
-
-/* Container for navigation links */
-.navigation-links {
-    display: flex; /* Enable flexbox layout */
-    justify-content: space-between; /* Space between links */
-    align-items: center; /* Center align the links vertically */
-    padding: 20px; /* Padding around the links */
-    width: 100%; /* Ensure the container spans the full width */
 }
 
-/* Style the navigation links with hover and animation effects */
+/* Hover Effect for Flip Card */
+.flip-card:hover {
+    transform: rotateY(180deg);
+}
+
+/* Image Styling within Flip Cards */
+.hat-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Navigation Link Styles */
+.navigation-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
 .navigation-links a {
-    color:  white; /* White text for consistency */
-    font-size: 1.5em; /* Larger font size */
-    text-decoration: none; /* No underline */
-    font-weight: bold; /* Bold text */
-    transition: color 0.3s ease-in-out, transform 0.5s; /* Smooth transitions */
-    animation: fadeInUp 1.5s; /* Fade-in animation */
+    color: #5C946E;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s ease-in-out, transform 0.5s;
 }
 
 .navigation-links a:hover {
-    color:#0000FF; /* Orange text on hover */
-    transform: rotate(10deg); /* Rotate on hover */
-    transition-delay: 0.1s; /* Delay for hover effect */
+    color: #FF8210; /* Light orange color for hover */
+    transform: translateY(-5px); /* Slight lift effect on hover */
 }
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
