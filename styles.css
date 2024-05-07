@@ -111,3 +111,46 @@ h2 {
     animation: bounce-in 2s ease-in; /* Apply bounce-in animation over 2 seconds */
 }
 
+/* Existing styles are preserved as you've written them. */
+/* Add media queries below */
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 5em; /* Smaller font size for tablets */
+    }
+    h2 {
+        font-size: 2.5em; /* Smaller font size for tablets */
+    }
+    .cover-image {
+        max-width: 60%; /* Increase maximum width for better fit on tablet screens */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        padding: 20px; /* Add padding to avoid touching the edges */
+    }
+    h1 {
+        font-size: 3em; /* Further reduce the font size for small screens */
+    }
+    h2 {
+        font-size: 1.5em; /* Further reduce the font size for small screens */
+    }
+    .cover-image {
+        max-width: 80%; /* Make the image use more of the width on small screens */
+    }
+    .next-page {
+        bottom: 20px; /* Increase distance from bottom for easier access */
+        right: 20px; /* Increase distance from right for consistency */
+    }
+}
+
+/* Considerations for better accessibility and usability on all devices */
+/* Ensure clickable elements are easier to tap on touch devices */
+.next-page {
+    min-width: 44px; /* Minimum recommended size for touch targets */
+    min-height: 44px; /* Minimum recommended size for touch targets */
+}
