@@ -11,12 +11,24 @@ h1 {
     color: #D17F87; /* Dusty rose, a muted pink that is soft yet distinctive */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-size: 4em;
-    text-transform: uppercase;
-    transition: color 0.3s ease-in-out;
-    animation: fadeInSlideUp 2s ease;
     text-align: center;
-   
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Soft shadow for text depth */
+    animation: fadeInSlideUp 2s ease forwards; /* Ensures animation ends in the visible final state */
 }
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 
 /* Grid Layout for Flipping Images */
 .image-grid {

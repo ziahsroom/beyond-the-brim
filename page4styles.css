@@ -4,14 +4,29 @@ body {
 }
 
 /* Header Styles */
+/* Header Styles */
 h1 {
     color: #5C946E; /* Earthy green */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-size: 4em;
-    text-transform: uppercase;
-    animation: fadeInSlideUp 2s ease;
     text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Adds shadow for depth */
+    animation: fadeInSlideUp 2s ease forwards; /* Improved animation */
 }
+
+/* Keyframes for fadeInSlideUp animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 
 /* Grid Layout for Flipping Images */
