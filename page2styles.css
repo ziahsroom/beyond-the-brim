@@ -159,3 +159,77 @@ body {
 
 
 /* Hover effect with rotation
+
+
+/* Existing styles are preserved as above. */
+/* Add media queries below for responsive design */
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .main-grid {
+        padding: 20px; /* Reduced padding for smaller screens */
+        border-radius: 10px; /* Smaller radius for a sleeker look */
+    }
+
+    .introduction h1, .personal-connection h2 {
+        font-size: 4em; /* Smaller font size for tablets */
+    }
+
+    .introduction p, .personal-connection p {
+        font-size: 1em; /* Smaller font size for better fit */
+        line-height: 1.5; /* Adjust line spacing for readability */
+    }
+
+    .hats-image {
+        max-width: 90%; /* Increase relative width for smaller screens */
+    }
+
+    .navigation-links a {
+        font-size: 1em; /* Smaller font size for links */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    body {
+        display: flex; /* Switch to flex layout for better control */
+        flex-direction: column; /* Stack content vertically */
+        padding: 10px; /* More padding to avoid edge touch */
+    }
+
+    .main-grid {
+        flex-direction: column; /* Ensure elements stack vertically */
+        padding: 10px; /* Less padding to save space */
+    }
+
+    .introduction h1, .personal-connection h2 {
+        font-size: 3em; /* Further reduce font size for mobile */
+    }
+
+    .introduction p, .personal-connection p {
+        font-size: 0.8em; /* Further reduce font size for text */
+        line-height: 1.4; /* Adjust line height for compact display */
+    }
+
+    .hats-image {
+        max-width: 100%; /* Utilize full width for images */
+        animation: none; /* Optionally disable animations on mobile for performance */
+    }
+
+    .navigation-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center align the links */
+    }
+
+    .navigation-links a {
+        font-size: 0.8em; /* Smaller text for navigation links */
+        padding: 10px; /* Increase padding for better tap targets */
+        margin-top: 10px; /* Add spacing between links */
+    }
+}
+
+/* Ensure interactive elements are easy to tap on mobile */
+.navigation-links a, .hats-image {
+    min-width: 44px; /* Minimum recommended width for touch targets */
+    min-height: 44px; /* Minimum recommended height for touch targets */
+}
