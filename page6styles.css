@@ -12,7 +12,7 @@ h1 {
     transition: color 0.3s ease-in-out;
     animation: fadeInSlideDown 2s ease; /* Changing animation direction */
     text-align: center;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Enhancing text shadow for depth */
+ 
 }
 
 /* Grid Layout for Flipping Images */

@@ -6,7 +6,6 @@ body {
 /* Header Styles */
 h1 {
     color: #5C946E; /* Earthy green */
-    text-shadow: 2px 2px 4px #000; /* Subtle shadow for depth */
     font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
     font-size: 4em;
     text-transform: uppercase;

@@ -15,7 +15,7 @@ h1 {
     transition: color 0.3s ease-in-out;
     animation: fadeInSlideUp 2s ease;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(108, 123, 138, 0.5); /* Soft grey shadow for subtle depth */
+   
 }
 
 /* Grid Layout for Flipping Images */
