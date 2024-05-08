@@ -47,6 +47,27 @@ body {
     animation: popIn 1.5s; /* Pop-in animation */
 }
 
+/* Style for home link at the top of the page */
+.home-link {
+    position: absolute; /* Position it relative to the body */
+    top: 10px; /* Small distance from the top */
+    left: 10px; /* Small distance from the left side */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.home-link a {
+    color: black; /* Match text color to the theme */
+    font-size: 1em; /* Reasonable text size */
+    text-decoration: none; /* No underline */
+    opacity: 0.5; /* Semi-transparent for subtlety */
+    transition: opacity 0.3s; /* Smooth transition for hover effect */
+}
+
+.home-link a:hover {
+    opacity: 1; /* Full opacity on hover for visibility */
+}
+
+
 /* Style for the summary title */
 .summary-title {
     font-size: 2em; /* Larger font size */

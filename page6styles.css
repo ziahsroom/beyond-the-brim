@@ -117,3 +117,25 @@ h1 {
         transform: translateY(0);
     }
 }
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column for mobile devices to stack images vertically */
+    }
+
+    h1 {
+        font-size: 2em; /* Further reduce font size for mobile */
+    }
+
+    .navigation-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center-align links for better appearance */
+    }
+
+    .navigation-links a {
+        font-size: 1em; /* Even smaller font size for mobile */
+        padding: 10px; /* Increase padding for better tap targets */
+        margin-top: 10px; /* Add spacing between links */
+    }
+}
